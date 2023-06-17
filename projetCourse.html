@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets Java</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="projets.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="projects-title" id="projects">Mes Projets HTML/CSS</h2>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="menu">
+            <div class="menu-links">
+                <a href="index.html" class="menu-link" onclick="closeMenu()">Accueil</a>
+                <a href="index.html#aboutme" class="menu-link">A propos de moi</a>
+                <a href="index.html#projects" class="menu-link" onclick="closeMenu()">Mes projets</a>
+                <a href="index.html#mecontacter" class="menu-link" onclick="closeMenu()">Me contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="projects">
+            <div class="project">
+                <div class="project-info">
+                    <div class="project-title">Une course au couleur de l'Ukraine</div>
+                    <div class="project-description">
+                        <p>En plein début de la guerre en Ukraine, ma classe de terminale à eu pour projet de réaliser
+                            une course caritative afin d'aider les réfugiés. Nous nous sommes attribués des rôles selon
+                            nos centres d'intéret, le miens étant l'informatique, j'étais chargé d'une partie de la
+                            comunication ainsi que de la création d'un site internet. J'ai donc réalisé ce site à l'aide
+                            de l'outil WIX en entrant toutes les informations relatives à notre course. Je n'ai pas pu
+                            être présent pour le jour de la course mais elle a été réalisée avec succès</p>
+
+                        <p>Voici le site réalisé :</p>
+                    </div>
+                    <iframe src="https://mdldelamure.wixsite.com/lafouleelyceenne" frameborder="0"></iframe>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="projets.js"></script>
+</body>
+
+</html>

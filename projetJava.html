@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets Java</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="projets.css">
+</head>
+
+<body>
+  <header>
+    <h2 class="projects-title" id="projects">Mes Projets JAVA</h2>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="menu">
+      <div class="menu-links">
+        <a href="index.html" class="menu-link" onclick="closeMenu()">Accueil</a>
+        <a href="index.html#aboutme" class="menu-link">A propos de moi</a>
+        <a href="index.html#projects" class="menu-link" onclick="closeMenu()">Mes projets</a>
+        <a href="index.html#mecontacter" class="menu-link" onclick="closeMenu()">Me contacter</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="projects">
+      <div class="project">
+        <div class="project-info">
+          <div class="project-title">Un algorithme d'apprentissage automatique</div>
+          <div class="project-description">
+            <p>Nous avions pour objectif de réaliser un programme codé en JAVA visant à trier des dépêches de journaux.
+              Ce projet consistait en différentes étapes : </p>
+            <ul>
+              <li>La première consistait en la création d'une base de donnée avec des poids que nous définissions</li>
+              <li>La deuxième était un algorithme de tri automatique basé sur une liste de dépèches déjà triées afin de
+                déterminer la catégorie d'autres dépèches</li>
+              <li>La dernière était une étape d'optimisation afin d'appliquer les méthodes réalisées en cours comme par
+                exemple celle-ci : </li>
+            </ul>
+          </div>
+          <pre>
+            <script src="prism.js"></script>
+            <link rel="stylesheet" href="prism.css">
+            <code class="language-java">
+              public static ArrayList&lt;PaireChaineEntier&gt; initDico(ArrayList&lt;Depeche> depeches, String categorie){
+                ArrayList&lt;PaireChaineEntier> resultat = new ArrayList<>(Arrays.asList(new PaireChaineEntier(depeches.get(0).getMots().get(0), 0)));
+                int i = 0;
+                int j;
+                String pattern = "[a-z]+";
+                while (i < depeches.size()){                                                                                                          //Parcours complet de toutes les dépèches
+                    if(depeches.get(i).getCategorie().compareToIgnoreCase(categorie) == 0){                                                           //Si la catégorie est la même que celle de la dépêche
+                        j = 0;
+                        while (j < depeches.get(i).getMots().size()){
+                            boolean matches = Pattern.matches(pattern, depeches.get(i).getMots().get(j));
+                            if(matches & UtilitairePaireChaineEntier.indicePourChaine(resultat, depeches.get(i).getMots().get(j)) < 0){               //Si le mot n'est pas déjà dans resultat
+                                resultat.add(new PaireChaineEntier(depeches.get(i).getMots().get(j), 0));                                             //Ajoute a l'Arraylist tout les mots
+                            }
+                            j++;
+                        }
+                    }
+                    i++;
+                }
+                return resultat;
+        
+            }
+            </code>
+          </pre>
+          <p>Nous avons été noté notamment sur la qualité de code, ce qui nous a valut d'avoir parmis les meilleurs
+            résultats de notre groupe.</p>
+        </div>
+      </div>
+
+      <div class="project">
+
+        <div class="project-info">
+          <div class="project-title">Une application de création de sorties de ski</div>
+          <div class="project-description">
+            <p>Nous avons conçus une application dans le but d'organiser des sorties de ski afin de permettre des
+              rencontres entre skieurs et de les mettre en relation avec des moniteurs de ski... (SAE non réalisée
+              encore)</p>
+            <img src="img/AnantP@java.png" alt="Projet 2">
+          </div>
+        </div>
+      </div>
+
+      <!-- Ajoutez d'autres projets ici -->
+    </div>
+  </div>
+
+  <script src="projets.js"></script>
+</body>
+
+</html>

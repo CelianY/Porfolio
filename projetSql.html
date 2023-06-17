@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets Java</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="projets.css">
+</head>
+
+<body>
+  <header>
+    <h2 class="projects-title" id="projects">Mes Projets SQL</h2>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="menu">
+      <div class="menu-links">
+        <a href="index.html" class="menu-link" onclick="closeMenu()">Accueil</a>
+        <a href="index.html#aboutme" class="menu-link">A propos de moi</a>
+        <a href="index.html#projects" class="menu-link" onclick="closeMenu()">Mes projets</a>
+        <a href="index.html#mecontacter" class="menu-link" onclick="closeMenu()">Me contacter</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="projects">
+      <div class="project">
+        <div class="project-info">
+          <div class="project-title">La création complète d'une base de données</div>
+          <div class="project-description">
+            <p>Nous avons commencés par réaliser la création complète d'une base de donnée basique. Notre sujet était de
+              faire un bilan des victimes du titanic et d'en faire une interprétation :</p>
+            <ul>
+              <li>Dans un premier temps, nous avons créés le diagramme SEA et SLR de notre future base tout en
+                justifiant nos choix.</li>
+              <li>Nous avons ensuite créés la base de donnée de façon à pouvoir y insérer les données.</li>
+              <li>Enfin, nous avons interrogés la base afin d'en extraire les données nécessaires pour notre
+                interprétation. Voici un exemple de requète réalisée : </li>
+            </ul>
+          </div>
+          <pre>
+            <script src="prism.js"></script>
+            <link rel="stylesheet" href="prism.css">
+            <code class="language-java">
+              SELECT p1.Pclass,
+              (SELECT sum(survived) as survivants_enfants FROM passenger p, rescue r where age < 12 and p.passengerid = r.passengerid and p.pclass = p1.pclass),
+              (SELECT sum(survived) as survivants_femmes FROM passenger p, rescue r where age >= 12 and sex = 'female' and p.passengerid = r.passengerid and p.pclass = p1.pclass),
+              (SELECT sum(survived) as survivants_hommes FROM passenger p, rescue r where age >= 12 and sex = 'male' and p.passengerid = r.passengerid and p.pclass = p1.pclass) 
+              from passenger p1 group by p1.Pclass order by p1.Pclass;
+
+               pclass | survivants_enfants | survivants_femmes | survivants_hommes 
+              --------+--------------------+-------------------+-------------------
+                    1 |                  4 |               135 |                56
+                    2 |                 22 |                75 |                14
+                    3 |                 27 |                82 |                58
+              (3 rows)
+            </code>
+          </pre>
+          <p>Les résultats se sont montré concluants et notre base de donnée fonctionnelle. Les requètes en particuliers
+            ont été réalisées avec succès.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-info">
+          <div class="project-title">La création de vues et l'interprétation statistique</div>
+          <div class="project-description">
+            <p>Nous avons ensuite réalisés la création d'une vue sur une base de données ayant été préalablement créée
+              et remplie. Le sujet portait sur l'accidentologie, dans notre cas pour la région Grand-Est et pour les
+              personens de moins de 18 ans. Le but finale étant d'en faire une analyse statistique :</p>
+            <ul>
+              <li>Premièrement nous avons créés les vues necessaire a l'extraction des données dont nous avions besoins.
+              </li>
+              <li>Nous avons ensuite utilisés les données ainsi récupérées afin de les intégrer dans un fichier csv et
+                de les utiliser dans une analyse statistique basée sur des graphiques codés en R.</li>
+            </ul>
+            <p>Voici un exemple de création de table temporaire créée dans ce projet : </p>
+          </div>
+          <pre>
+                <script src="prism.js"></script>
+                <link rel="stylesheet" href="prism.css">
+                <code class="language-java">
+                  CREATE TEMP TABLE vehicules_grand_est_mineurs AS
+                  SELECT v.* AS age from vehicules v 
+                  JOIN usagers u ON v.num_acc = u.num_acc 
+                  JOIN caracteristiques c ON v.num_acc = c.num_acc 
+                  JOIN departements_francais d ON c.dep = d.num WHERE d.region = 'Grand Est' AND c.an - an_nais < 18;
+                </code>
+              </pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="projets.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="menu">
+      <div class="menu-links">
+        <a href="#" class="menu-link" onclick="closeMenu()">Accueil</a>
+        <a href="#aboutme" class="menu-link" onclick="closeMenu()">A propos de moi</a>
+        <a href="#projects" class="menu-link" onclick="closeMenu()">Mes projets</a>
+        <a href="#mecontacter" class="menu-link" onclick="closeMenu()">Me contacter</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="img/photo_ID_Celian.jpg" alt="Ma photo de profil" class="profile-pic">
+    <p class="message">Bienvenue sur le portfolio de Célian Yckache</p>
+  </div>
+  <h2 class="projects-title" id="aboutme" >A propos de moi</h2>
+  <p class="project-description">Je suis un étudiant en première année de BUT informatique à l'IUT2 de Grenoble. J'ai réalisé mes années de lycée au lycée de la Matheysine section biqualifiante ski alpin. containerirement a la majorité des lycée de ce type, j'ai réalisé mon bac en 3 ans et non en 4.</p>
+  <p class="project-description">Le BUT informatique m'a permis notamment avec des cours ainsi que des projets d'acquerir certaines compétences en informatique :</p>
+  <article>
+    
+    <div class="SkillBar">
+      <div id="Skill-HTML"> 
+        <span class="Skill-Area ">HTML</span>
+      </div>
+    </div>
+    
+    <div class="SkillBar">
+      <div id="Skill-CSS">
+        <span class="Skill-Area ">CSS</span>
+      </div>
+    </div>
+    
+    <div class="SkillBar">
+      <div id="Skill-XML">
+        <span class="Skill-Area ">JavaFX </span>
+      </div>
+    </div>
+
+    
+      <div class="SkillBar">
+      <div id="Skill-JAVA">
+        <span class="Skill-Area ">JAVA </span>
+      </div>
+    </div>
+    
+      <div class="SkillBar">
+      <div id="Skill-SQL">
+        <span class="Skill-Area ">SQL </span>
+      </div>
+    </div>
+  </article>
+  <h2 class="projects-title" id="projects" >Mes projets</h2>
+  <p class="project-description">Tout au long de mon cursus d'apprentissage ainsi que professionnel j'ai eu à réaliser de nombreux projets notament en groupe de travail. J'ai aussi participé a l'organisation d'évènements et par des emplois de courte durée ai commencé à m'intégrer au milieu professionnel.</p>
+  <p class="project-description">Durant mon cursus d'études, j'ai participés a de nombreuses SAE ainsi qu'à des projets plus cours dans les différents domaines de l'informatique. Les SAE sont des projets réalisés sur du plus ou moins long terme, de une à plusieurs semaines en moyenne.</p>
+  <div class="projects">
+    <div class="project">
+      <a href="projetJava.html"><img src="img/AnantP@java.png" alt="Projet 1" class="photo_noire"></a>
+      <p class="project-title">JAVA</p>
+    </div>
+    <div class="project">
+      <a href="projetSql.html"><img src="img/postgresql.png" alt="Projet 2"></a>
+      
+      <p class="project-title">SQL</p>
+    </div>
+    <div class="project">
+      <a href="projetHtml.html"><img src="img/AnantP@html.png" alt="Projet 3" class="photo_noire"></a>
+      <p class="project-title">HTML/CSS</p>
+    </div>
+    <div class="project">
+      <a href="projetLinux.html"><img src="img/linux.jfif" alt="Projet 4"></a>
+      <p class="project-title">LINUX</p>
+    </div>
+  </div>
+
+  <p class="project-description">Personnellement j'ai aussi participé à de nombeux projets, notamment avec mon lycée où j'ai fait partis du conseil du CVL et de l'association de la MDL. Cela m'a permis d'organiser plusieurs évènements, notamment une course caritative et un concours d'éloquence.</p>
+  <p class="project-description">De plus, j'ai réalisé mon lycée en sport étude afin de prétendre à l'obtention du diplome d'Etat de ski alpin.</p>
+
+  <div class="projects">
+    
+    <div class="project">
+      <a href="projetCourse.html"><img src="img/Logo de la foulée lycéenne3.webp" alt="Projet 1" ></a>
+      <p class="project-title">Course caritative</p>
+    </div>
+    <div class="project">
+      <a href="concoursEloquence.html"><img src="img/FThhhNhWIAE9xeE.jfif" alt="Projet 2" class="photo_noire"></a>
+      <p class="project-title">Concours d'éloquence</p>
+    </div>
+    <div class="project">
+      <a href="projetDESki.html"><img src="img/esf.png" alt="Projet 3"></a>
+      <p class="project-title">DE de ski alpin</p>
+    </div>
+  </div>
+  <footer id="mecontacter">
+    <h2>Me contacter</h2>
+    <div class="imagesfooter">
+      <a href="https://www.instagram.com/celian.yckache/" target="_blank"><img src="img/pngfind.com-instagram-png-white-2773517.png" alt="Image 1"></a>
+      <a href="https://twitter.com/celian_yck" target="_blank"><img src="img/pngegg.png" alt="Image 2"></a>
+      <a href="https://github.com/CelianY" target="_blank"><img src="img/kisspng-github-pages-logo-repository-fork-github-logo-1-magentys-5b69de71b51265.8586076615336648817417.png" alt="Image 3"></a>
+    </div>
+    <div class="txtfooter">
+      <p>Email : celian.yckache@etu.univ-grenoble-alpes.fr</p>
+    <p>Téléphone : <span>07 67 24 70 96</span></p>
+    </div>
+    
+  </footer>
+
+  <script src="test.js"></script>
+</body>
+</html>

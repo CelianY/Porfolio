@@ -1,0 +1,206 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ADD8E6;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle-label {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle-label span {
+  display: block;
+  background-color: black;
+  height: 4px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-toggle:checked + .menu-toggle-label span:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
+}
+
+.menu-toggle:checked + .menu-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked + .menu-toggle-label span:nth-child(3) {
+  transform: translateY(-14px) rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #333;
+  z-index: 99;
+  overflow: auto;
+  opacity: 0; /* Ajout de l'opacité initiale */
+  animation: fade-in 0.3s ease-in-out forwards; /* Animation de fondu */
+}
+
+@keyframes fade-in {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+}
+
+.menu-toggle:checked ~ .menu {
+  display: block;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.menu-link {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column; /* Afficher les projets en colonne */
+  align-items: center; /* Centrer les projets horizontalement */
+  max-width: 1200px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px 20px 0px;
+  max-width: 1500px;
+  text-align: center;
+}
+
+
+
+
+.project-info {
+  text-align: left;
+  margin-left: 0;
+}
+
+.project-title {
+  font-size: 24px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.project-description {
+  margin-top: 10px;
+}
+
+.project-description p {
+  font-size: 16px;
+  color: #555;
+}
+
+.project:hover .project-title {
+  opacity: 0.7;
+}
+.projects-title {
+  font-size: 60px;
+  color: #333;
+  animation: fade-in 1s ease-in-out forwards;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.projects-title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  bottom: -10px;
+  left: 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.projects-title:hover::before {
+  transform: scaleX(0.5);
+  opacity: 1;
+}
+pre{
+  margin-top: 50px;
+
+}
+pre code {
+  display: block;
+  padding-right: 3em;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  
+}
+
+pre code.language-java {
+  background-color: #272822;
+  color: #f8f8f2;
+  
+}
+
+.banner{
+  margin-top: 50px;
+  height: 500px;
+
+}
+
+.project iframe{
+  width: 100%;
+  height: 1000px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+embed{
+  margin-top: 50px;
+}
+.project img{
+  width: 100%;
+  height: 1000px;
+  object-fit: cover;
+  border-radius: 10px;
+}

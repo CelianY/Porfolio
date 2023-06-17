@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets Java</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="projets.css">
+</head>
+
+<body>
+  <header>
+    <h2 class="projects-title" id="projects">Mes Projets Linux</h2>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="menu">
+      <div class="menu-links">
+        <a href="index.html" class="menu-link" onclick="closeMenu()">Accueil</a>
+        <a href="index.html#aboutme" class="menu-link">A propos de moi</a>
+        <a href="index.html#projects" class="menu-link" onclick="closeMenu()">Mes projets</a>
+        <a href="index.html#mecontacter" class="menu-link" onclick="closeMenu()">Me contacter</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="projects">
+      <div class="project">
+        <div class="project-info">
+          <div class="project-title">La configuration complète d'un système Debian</div>
+          <div class="project-description">
+            <p>durant le premier semestre, après nous être familliarisés avec la navigation dans le terminal du système
+              debian, nous avons eu à configurer entièrement un poste de travail avec interface graphique sous linux en
+              installant les packages de base tels que Gedit et IntelliJ. <br>Durant le second semestre nous avons eu à
+              configurer l'entièreté du système mais sans interface graphique et en installant d'autres packages tels
+              que PostgreSQL, Php ou encore PhpPgAdmin et en configurant l'application PostgreSQL afin d'y accéder
+              depuis nos sessions de base. Le tout a été réalisé sur des machines virtuelles. La seconde partie avait
+              pour but de nous permettre de réaliser un guide d'installation d'un poste de travail que voici : </p>
+
+            <embed src="img/YCKACHE_Celian_A1_SAE2.03.pdf" width="1500" height="1000" type="application/pdf" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="projets.js"></script>
+</body>
+
+</html>
