@@ -34,12 +34,12 @@
         <div class="project-info">
           <div class="project-title">Un algorithme d'apprentissage automatique</div>
           <div class="project-description">
-            <p>Nous avions pour objectif de réaliser un programme codé en JAVA visant à trier des dépêches de journaux.
+            <p>Dans le cadre d'un travail en binôme, nous avions pour objectif de réaliser un programme codé en JAVA visant à trier des dépêches de journaux à l'aide d'autres dépèche déjà triées.
               Ce projet consistait en différentes étapes : </p>
             <ul>
-              <li>La première consistait en la création d'une base de donnée avec des poids que nous définissions</li>
+              <li>La première consistait en la création d'une base de données où nous associons des mots choisis à des poids, cette étape consistait en un apprentissage supervisé et non automatique</li>
               <li>La deuxième était un algorithme de tri automatique basé sur une liste de dépèches déjà triées afin de
-                déterminer la catégorie d'autres dépèches</li>
+                déterminer la catégorie de nouvelles dépèches, l'algorithme associais seul les poids et les mots ensembles.</li>
               <li>La dernière était une étape d'optimisation afin d'appliquer les méthodes réalisées en cours comme par
                 exemple celle-ci : </li>
             </ul>
@@ -59,7 +59,7 @@
                         while (j < depeches.get(i).getMots().size()){
                             boolean matches = Pattern.matches(pattern, depeches.get(i).getMots().get(j));
                             if(matches & UtilitairePaireChaineEntier.indicePourChaine(resultat, depeches.get(i).getMots().get(j)) < 0){               //Si le mot n'est pas déjà dans resultat
-                                resultat.add(new PaireChaineEntier(depeches.get(i).getMots().get(j), 0));                                             //Ajoute a l'Arraylist tout les mots
+                                resultat.add(new PaireChaineEntier(depeches.get(i).getMots().get(j), 0));                                             //Ajoute à l'Arraylist tous les mots
                             }
                             j++;
                         }
@@ -71,7 +71,7 @@
             }
             </code>
           </pre>
-          <p>Nous avons été noté notamment sur la qualité de code, ce qui nous a valut d'avoir parmis les meilleurs
+          <p>Nous avons été notés sur la qualité de code, ce qui nous a valu d'avoir parmi les meilleurs
             résultats de notre groupe.</p>
         </div>
       </div>
@@ -81,7 +81,7 @@
         <div class="project-info">
           <div class="project-title">Une application de création de sorties de ski</div>
           <div class="project-description">
-            <p>Nous avons conçus une application dans le but d'organiser des sorties de ski afin de permettre des
+            <p>Nous avons comme projet de concevoir une application dans le but d'organiser des sorties de ski afin de permettre des
               rencontres entre skieurs et de les mettre en relation avec des moniteurs de ski... (SAE non réalisée
               encore)</p>
             <img src="img/AnantP@java.png" alt="Projet 2">
